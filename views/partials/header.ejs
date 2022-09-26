@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Simple Recipes</title>
+</head>
+<body>
+  <nav style="background-image:linear-gradient(to right, red , yellow); padding: 1em;">
+    <h1><a href="/">Simple Recipes</a></h1>
+    <ul>
+      <% if(user) { %>
+      <li>Welcome <%= user.email %></li>
+      <li class="logoutbtn"><a href="/logout">logout</a></li>
+        <% } else{ %>
+      <li><a href="/login">login</a></li>
+      <li><a href="/signup" class="btn">signup</a></li>
+      <% } %>
+    </ul>
+  </nav>
+  
